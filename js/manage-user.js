@@ -117,8 +117,8 @@ const usersManagement = {
                                 <td>${userData.role}</td>
                                 <td>${userData.status}</td>
                                 <td class="text-center">
-                                    <button type="button" class="btn btn-sm edit-user-btn" data-toggle="modal" data-target=".add-edit-user-modal" data-id=${userID} >Edit</button>
-                                    <button type="button" class="btn btn-sm delete-user-btn" data-id=${userID} >Delete</button>
+                                    <button type="button" class="mt-1 btn btn-sm edit-user-btn" data-toggle="modal" data-target=".add-edit-user-modal" data-id=${userID} >Edit</button>
+                                    <button type="button" class="mt-1 btn btn-sm delete-user-btn" data-id=${userID} >Delete</button>
                                 </td>
                              </tr>`;
                             
