@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="logo-container">
+        <img src="./static/imgs/Brand-logo-Scratch-Horz-RGB@2x.png">
+    </div>
+    <div class="main-container">
+        
+        <div class="table-header">
+            <div class="text-left">
+                <h2>Manage Users Data</h2>
+             </div>
+             <div class="text-right">
+                 <button type="button" class="btn btn-lg mt-4 mb-4 add-new-user-btn" data-toggle="modal" data-target=".add-edit-user-modal"> Add New User </button>
+             </div>
+        </div>
+        
+       
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="users_table_body"> </tbody>
+            </table>
+        </div>
+    </div>
+   
+
+
+    <div class="modal fade add-edit-user-modal" tabindex="-1" role="dialog" aria-labelledby="add_edit_user_title" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                  <h4 class="modal-title" id="add_edit_user_title"></h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form id="user-form">
+                        <input type="hidden" id="user_id" value="">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">First Name</label>
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="Enter First Name" title="Enter First Name">
+                                <div class="invalid-feedback" id="inputFirstName_validation"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Last Name</label>
+                                <input type="text" class="form-control" id="inputLastName" placeholder="Enter Last Name" title="Enter Last Name">
+                                <div class="invalid-feedback" id="inputLastName_validation"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row">
+                          <div class="form-group col-md-12">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" title="Enter Email">
+                            <div class="invalid-feedback" id="inputEmail_validation"></div>  
+                        </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputRole">Role</label>
+                                <select id="inputRole" class="form-control" title="Select Role">
+                                    <option value="">Select Role</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Accountant">Accountant</option>
+                                </select>
+                                <div class="invalid-feedback" id="inputRole_validation"></div> 
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputStatus">Status</label>
+                                <select id="inputStatus" class="form-control" title="Select Status">
+                                    <option value="">Select Status</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                                <div class="invalid-feedback"  id="inputStatus_validation"></div> 
+                            </div>
+                        </div>
+
+
+                        <div class="text-center">
+                            <button type="button" class="btn btn-lg" id="save_user_data"> Save </button>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/manage-user.js"></script>
+    <script>
+       usersManagement.bindManageUsersUI();
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Global variables */
+:root {
+    /* Primary Midnight-100 (Primary copy titling, secondary buttons): HEX 1D1C2F,RGB 84/80/50/65 */
+    --primary-midnight-100:#1D1C2F;
+
+    /* Primary Midnight-50 (Buttons, icons, tertiary copy titling): HEX 5B70FF */
+    --primary-midnight-50:#5B70FF;
+
+    /* Secondary Sea-50 (Icons): HEX 6D64FF */
+    --secondary-sea-50:#6D64FF;
+
+    /* Secondary Dandelion-100 (Caution themes): HEX FFB71B */
+    --secondary-dandelion-100:#FFB71B;
+
+    /* Secondary Sunset-100 (Warning themes): HEX FF595A */
+    --secondary-sunset-100:#FF595A;
+
+    /* Secondary Mint-100 (Buttons): HEX 60EDCE */
+    --secondary-mint-100:#60EDCE;
+
+}
+
+/* Fonts */
+@font-face {
+    font-family: NewHeroRegular;
+    src: url(../static/fonts/Hero\ New\ Regular.otf);
+}
+
+@font-face {
+    font-family: NewHeroExtraBold;
+    src: url(../static/fonts/Hero\ New\ ExtraBold.otf);
+}
+
+body {
+    color: var(--primary-midnight-100);
+    background-image: url(../static/imgs/Brand-logo-Scratch-App-Borrower-RGB@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.overlay {
+    background-color: rgba(255, 255, 255,0.9);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.main-container {
+    width: 80%;
+    margin: 50px auto 0;
+    font-family: NewHeroRegular;
+}
+
+.logo-container {
+    height: 120px;
+    text-align: center;
+    background-color: #ecf4ff;
+}
+.logo-container img {
+    max-height: 100%;
+
+}
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.thead-dark {
+    font-family: NewHeroExtraBold;
+}
+
+.add-new-user-btn  , #save_user_data{
+    background-color: var(--primary-midnight-50);
+    color: #ededed;
+}
+.edit-user-btn {
+    background-color: var(--primary-midnight-100);
+    color: #fff;
+}
+.delete-user-btn{
+    background-color: var(--secondary-sunset-100);
+    color: #fff;
+}
+.empty-table{ 
+    text-align:center;
+    border: 1px solid #eee;
+}
