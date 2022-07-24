@@ -44,4 +44,4 @@ The interface is easy to use and all the elements are obvious and self-explanato
     Secondary Sunset-100 (Warning themes): HEX FF595A
     Secondary Mint-100 (Buttons): HEX 60EDCE
 ## Run
-    Open user-list.html in your browser
+    Open user-list.html in your browser 
